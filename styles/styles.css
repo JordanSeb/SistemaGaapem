@@ -1,0 +1,151 @@
+body {
+  display: flex;
+  height: 100vh;
+  margin: 0;
+}
+
+#sidebar {
+  width: 20%;
+  background-color: #14243D;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  position: fixed; /* Hace que la barra lateral sea fija */
+  height: 100%; /* Hace que la barra lateral ocupe todo el alto de la ventana */
+  overflow: auto; /* Permite desplazarse por la barra lateral si su contenido supera su altura */
+}
+
+.menu-link {
+  padding: 50px;
+  margin-bottom: 10px;
+  border: none;
+  background-color: #14243D;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: left;
+  width: 100%;
+  color: #BBBBBB;
+  text-decoration: none;
+  display: block;
+  font-size: 30px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+.menu-link:hover {
+  background-color: #2A3B57;
+  color: white;
+}
+
+#main {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  margin-left: 20%; /* Añade un margen izquierdo igual al ancho de la barra lateral */
+}
+
+#header {
+  background-color: rgb(69, 7, 7);
+  color: #f9f9f9;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 25px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+#header h1  {
+  text-align: center;
+  flex-grow: 1;
+}
+
+
+#header img {
+  margin-right: 10px;
+  max-width: 50px;
+}
+
+#content {
+  flex-grow: 1;
+  background-color: #f9f9f9;
+  padding: 10px;
+  
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 15px;
+}
+
+th {
+  background-color: #161c36;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+.agregar-button {
+  display: inline-block;
+  margin-left: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-decoration: none;
+  color: #fff;
+  background-color: #0c335c;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.agregar-button:hover {
+  background-color: #0869d1;
+}
+
+/* Estilos para el campo de entrada */
+#filtroEspecialidad {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-right: 10px;
+  width: 200px;
+}
+
+/* Estilos para el botón */
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #09335f;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+.alta-button {
+  display: inline-block;
+  
+  padding: 10px 20px;
+  font-size: 16px;
+  text-decoration: none;
+  color: #fff;
+  background-color: #520c06;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.alta-button:hover {
+  background-color: #a51b0f;
+}

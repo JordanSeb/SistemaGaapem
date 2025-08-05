@@ -1,0 +1,97 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+}
+
+form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+select,
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #3366cc;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #004080;
+}
+
+.cancel-button {
+    background-color: #cc3333;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.cancel-button:hover {
+    background-color: #800000;
+}
+
+#resumenCafeteria {
+    margin-top: 20px;
+}
+
+#listaProductos {
+    list-style: none;
+    padding: 0;
+}
+
+#listaProductos li {
+    margin-bottom: 8px;
+}
+
+#totalCafeteria {
+    font-weight: bold;
+    color: #cc3333;
+}
+
+.seleccionado {
+    background-color: #f2f2f2;
+}
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Alinea los elementos a la izquierda */
+    margin-bottom: 15px;
+}
+
+.checkbox-container label {
+    margin-left: 5px;
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+}
+
+.checkbox-container input {
+    margin-right: 5px; /* Ajusta el espacio entre el checkbox y el texto del label */
+}

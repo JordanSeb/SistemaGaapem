@@ -1,0 +1,88 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+#main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+h1{
+    border-bottom: 2px solid #333;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+h2 {
+    border-bottom: 2px solid #333;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+/* Estilo para los formularios */
+.form-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+/* Estilo específico para cada formulario */
+.form-container form {
+    width: 48%; /* Ajusta según tu preferencia */
+    border: 1px solid #333;
+    padding: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table, th, td {
+    border: 1px solid #333;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Estilo específico para la tabla de gastos de cafetería */
+#content table:nth-child(1) {
+    margin-bottom: 40px;
+}
+
+/* Estilo específico para la tabla de colegiaturas */
+#content table:nth-child(3) {
+    margin-bottom: 40px;
+}
+
+/* Estilo específico para la tabla de salidas de dinero */
+#content table:nth-child(5) {
+    margin-bottom: 40px;
+}
+
+button {
+    margin-top: 30px;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+a {
+    margin-left: 100px;
+    background-color: #f44336;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}

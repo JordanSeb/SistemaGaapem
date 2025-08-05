@@ -1,0 +1,72 @@
+/* folio.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fff;
+    color: #000;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+p {
+    margin: 5px 0;
+}
+
+#botonImprimir {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#botonSalir {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.ticket {
+    max-width: 300px;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.ticket h2 {
+    color: #444;
+}
+
+.ticket p {
+    margin: 10px 0;
+}
+
+.ticket #detalles {
+    font-weight: bold;
+}
+
+.ticket #detalles span {
+    margin-right: 10px;
+}
+
+.ticket #total {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+}

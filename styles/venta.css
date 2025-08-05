@@ -1,0 +1,111 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+}
+
+h1, h2 {
+    color: #343a40;
+}
+
+#content {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+#tablaVenta {
+    width: 100%;
+    max-width: 800px; /* Establece un ancho máximo */
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#tablaVenta th, #tablaVenta td {
+    border: 1px solid #dee2e6;
+    padding: 12px;
+    text-align: left;
+}
+
+#tablaVenta th {
+    background-color: #007bff;
+    color: white;
+}
+
+#tablaVenta td {
+    background-color: #f8f9fa;
+}
+
+#total {
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+/* Estilos adicionales según necesidades */
+/* ... Agrega estilos adicionales según tus necesidades ... */
+/* Agrega estilos para el botón Pagar */
+/* Ajusta el estilo del botón Pagar para ocupar el 100% del ancho */
+.pagar-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px; /* Añade un poco de espacio superior para separar del resto de los elementos */
+    text-align: center;
+}
+
+.pagar-button:hover {
+    background-color: #218838;
+}
+
+/* Estilo para el botón Cancelar */
+.cancelar-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #dc3545;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px; /* Añade un poco de espacio superior para separar del resto de los elementos */
+    text-align: center;
+}
+
+.cancelar-button:hover {
+    background-color: #c82333;
+}
