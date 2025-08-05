@@ -2,7 +2,7 @@
 header("Content-Type: application/json");
 include '../conexion.php';
 
-if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+if ($_SERVER['REQUEST_METHOD'] !== 'DELETE') {
     http_response_code(405);
     echo json_encode(["error" => "Método no permitido"]);
     exit;

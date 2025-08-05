@@ -15,7 +15,7 @@ function confirmDelete(alumno, id) {
 
 function deleteAlumno(id) {
     fetch('/SistemaGaapem/api-rest/alumnos/eliminar_alumno.php', {
-        method: 'POST',
+        method: 'DELETE',
         headers: {
             'Content-Type': 'application/json'
         },

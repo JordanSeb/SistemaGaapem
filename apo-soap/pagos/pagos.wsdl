@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions name="PagosService"
+             targetNamespace="http://example.com/pagos"
+             xmlns:tns="http://example.com/pagos"
+             xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+             xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+             xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+
+  <!-- Types -->
+  <types>
+    <xsd:schema targetNamespace="http://example.com/pagos">
+      <xsd:element name="registrarColegiaturaRequest">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="alumno_id" type="xsd:int"/>
+            <xsd:element name="monto" type="xsd:decimal"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+
+      <xsd:element name="registrarColegiaturaResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="folio" type="xsd:string"/>
+            <xsd:element name="status" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+
+      <xsd:element name="registrarCafeteriaRequest">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="detallesProductos" type="xsd:string"/> <!-- JSON -->
+            <xsd:element name="precio_pagado" type="xsd:decimal"/>
+            <xsd:element name="por_pagar" type="xsd:decimal"/>
+            <xsd:element name="detalles" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+
+      <xsd:element name="registrarCafeteriaResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="folio" type="xsd:string"/>
+            <xsd:element name="total" type="xsd:decimal"/>
+            <xsd:element name="status" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+
+      <xsd:element name="obtenerPagoRequest">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="folio" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+
+      <xsd:element name="obtenerPagoResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="pago" type="xsd:string"/> <!-- JSON estructura del pago -->
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </types>
+
+  <!-- Messages -->
+  <message name="registrarColegiaturaRequest">
+    <part name="parameters" element="tns:registrarColegiaturaRequest"/>
+  </message>
+  <message name="registrarColegiaturaResponse">
+    <part name="parameters" element="tns:registrarColegiaturaResponse"/>
+  </message>
+
+  <message name="registrarCafeteriaRequest">
+    <part name="parameters" element="tns:registrarCafeteriaRequest"/>
+  </message>
+  <message name="registrarCafeteriaResponse">
+    <part name="parameters" element="tns:registrarCafeteriaResponse"/>
+  </message>
+
+  <message name="obtenerPagoRequest">
+    <part name="parameters" element="tns:obtenerPagoRequest"/>
+  </message>
+  <message name="obtenerPagoResponse">
+    <part name="parameters" element="tns:obtenerPagoResponse"/>
+  </message>
+
+  <!-- Port Type -->
+  <portType name="PagosPortType">
+    <operation name="registrarColegiatura">
+      <input message="tns:registrarColegiaturaRequest"/>
+      <output message="tns:registrarColegiaturaResponse"/>
+    </operation>
+    <operation name="registrarCafeteria">
+      <input message="tns:registrarCafeteriaRequest"/>
+      <output message="tns:registrarCafeteriaResponse"/>
+    </operation>
+    <operation name="obtenerPago">
+      <input message="tns:obtenerPagoRequest"/>
+      <output message="tns:obtenerPagoResponse"/>
+    </operation>
+  </portType>
+
+  <!-- Binding -->
+  <binding name="PagosSoapBinding" type="tns:PagosPortType">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="registrarColegiatura">
+      <soap:operation soapAction="registrarColegiatura"/>
+      <input><soap:body use="literal"/></input>
+      <output><soap:body use="literal"/></output>
+    </operation>
+    <operation name="registrarCafeteria">
+      <soap:operation soapAction="registrarCafeteria"/>
+      <input><soap:body use="literal"/></input>
+      <output><soap:body use="literal"/></output>
+    </operation>
+    <operation name="obtenerPago">
+      <soap:operation soapAction="obtenerPago"/>
+      <input><soap:body use="literal"/></input>
+      <output><soap:body use="literal"/></output>
+    </operation>
+  </binding>
+
+  <!-- Service -->
+  <service name="PagosService">
+    <port name="PagosPort" binding="tns:PagosSoapBinding">
+      <soap:address location="http://localhost/SistemaGaapem/api-soap/pagosWS.php"/>
+    </port>
+  </service>
+</definitions>
