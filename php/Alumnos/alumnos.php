@@ -105,14 +105,15 @@
     <script>
         $(document).ready(function() {
             $.ajax({
-                url: '/SistemaGaapem/api-rest/alumnos/obtener_alumnos.php',
+                url: '/SistemaGaapem/api-soap/alumnos/puente_soap.php',
                 type: 'GET',
+                data: {accion: 'obtenerAlumnos'},
                 dataType: 'json',
                 success: function(data) {
+                    console.log("✅ Datos SOAP recibidos:", data);
                     var tabla = $('#miTabla tbody');
                     tabla.empty(); // limpia por si acaso
                     data.forEach(function(alumno) {
-                        console.log(alumno.fechaInicio);
                         var fila = `
                             <tr>
                                 <td>${alumno.nombre}</td>

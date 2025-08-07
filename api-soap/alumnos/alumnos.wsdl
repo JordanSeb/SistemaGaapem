@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions name="AlumnoService"
+             targetNamespace="http://localhost/SistemaGaapem/api-soap/alumnos"
+             xmlns:tns="http://localhost/SistemaGaapem/api-soap/alumnos"
+             xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+             xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+             xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+             xmlns="http://schemas.xmlsoap.org/wsdl/">
+
+  <types>
+    <!-- Puedes definir tipos aquí si deseas -->
+  </types>
+
+  <message name="obtenerAlumnosRequest"/>
+  <message name="obtenerAlumnosResponse">
+    <part name="return" type="xsd:string"/>
+  </message>
+
+  <portType name="AlumnoPortType">
+    <operation name="obtenerAlumnos">
+      <input message="tns:obtenerAlumnosRequest"/>
+      <output message="tns:obtenerAlumnosResponse"/>
+    </operation>
+  </portType>
+
+  <binding name="AlumnoBinding" type="tns:AlumnoPortType">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="obtenerAlumnos">
+      <soap:operation soapAction="obtenerAlumnos"/>
+      <input>
+        <soap:body use="encoded" namespace="http://localhost/SistemaGaapem/api-soap/alumnos" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="http://localhost/SistemaGaapem/api-soap/alumnos" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+  </binding>
+
+  <service name="AlumnoService">
+    <port name="AlumnoPort" binding="tns:AlumnoBinding">
+      <soap:address location="http://localhost/SistemaGaapem/api-soap/alumnos/servidor_soap_alumnos.php"/>
+    </port>
+  </service>
+</definitions>
